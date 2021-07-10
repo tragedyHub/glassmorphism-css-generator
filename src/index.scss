@@ -1,0 +1,233 @@
+@mixin blockStyles {
+  border: 1px solid #374251;
+  padding: 1.5em;
+  border-radius: 0.3em;
+  height: 100%;
+  background: #1f2a37;
+}
+
+*,
+a,
+li,
+button,
+div {
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.container {
+  height: 100%;
+  width: 1300px;
+  margin: 0 auto;
+}
+
+.App {
+  width: 100vw;
+  height: 100vh;
+  // background-image: url("https://images.unsplash.com/photo-1519681393784-d120267933ba?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1124&q=100");
+  // background-position: center;
+  // background-size: cover;
+  background: #111927;
+}
+
+input {
+  outline: none;
+}
+
+.help_row {
+  height: 5%;
+  padding-top: 2em;
+
+  .cont {
+    background: #1f2a37;
+    height: 100%;
+    border: 1px solid #374251;
+    border-radius: 0.3em;
+    padding: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.help_row_item_title {
+  margin-bottom: 1em;
+}
+
+.help_row_item_input {
+  background: transparent;
+  border: 1px solid #374251;
+  border-radius: 0.3em;
+  padding: 0.4em 0.4em;
+  font-size: 0.8em;
+  ::placeholder {
+    color: #88909c;
+  }
+}
+
+.result_section {
+  margin-top: 6.4em;
+  height: 50vh;
+  .cont {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .result_card,
+  .code_result {
+    @include blockStyles();
+    width: 45%;
+  }
+}
+
+.result_content_title {
+  font-weight: 500;
+  font-size: 1.3em;
+  padding: 0.8em;
+}
+
+.result_content_row {
+  border-bottom: 1px solid #1a1a1a;
+  height: 17%;
+}
+
+.result_content_team {
+  padding: 0 1em;
+}
+.result_content_people_card {
+  padding: 0.5em 0;
+  height: 3em;
+  display: flex;
+  align-items: center;
+}
+.result_content_people_card:not(:last-child) {
+  border-bottom: 1px solid #1a1a1a;
+}
+
+.card_logo {
+  height: 2.2em;
+  width: 2.2em;
+  background: #333;
+  border-radius: 50%;
+  margin-right: 1em;
+}
+.card_column {
+  display: flex;
+  flex-direction: column;
+}
+
+.card_title {
+  font-size: 0.9em;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  margin-top: 0.3em;
+}
+.status_text {
+  font-size: 0.8em;
+  color: #9A9DAC;
+}
+.circle {
+  height: 0.5em;
+  width: 0.5em;
+  border-radius: 50%;
+  margin-right: 0.3em;
+}
+
+.status_online {
+  background: #13A987;
+}
+
+.status_offline {
+  background: #D81E5B;
+}
+.status_buzy {
+  background: #F59E0B;
+}
+
+.btn {
+  display: flex;
+  margin-left: auto;
+  padding: 1em;
+  background: #3CAA5B;
+  border: none;
+  font-size: 0.8em;
+  border-radius: 0.5em;
+  cursor: pointer;
+}
+
+.logo1 {
+  background: url(./images/people_logo1.jpg) no-repeat center center;
+  background-size: cover;
+}
+.logo2 {
+  background: url(./images/people_logo2.jpg) no-repeat center center;
+  background-size: cover;
+}
+.logo3 {
+  background: url(./images/people_logo3.jpg) no-repeat center center;
+  background-size: cover;
+}
+.logo4 {
+  background: url(./images/people_logo4.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+
+.code_result {
+  .code_result_title {
+    margin-bottom: 1em;
+  }
+}
+.code_result_content {
+  display: flex;
+  flex-direction: column;
+}
+
+.code_row {
+  display: flex;
+  align-items: center;
+}
+
+.selector {
+  color: #F7A54F;
+  margin-right: 0.3em;
+}
+
+.property_code_row {
+  padding-left: 1.5em;
+  margin: 0.3em 0;
+}
+
+.property_cont {
+  padding-left: 0.3em;
+  color: #099CEB;
+}
+
+.property_value {
+  color: #E75159;
+}
+
+.bracket {
+  color: #8A919D;
+}
+
+.mt {
+  margin-top: 3em;
+}
+.green {
+  color: #3FB362;
+}
+.white {
+  color: #fff;
+}
+

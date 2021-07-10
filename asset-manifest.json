@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/glassmorphism-css-generator/static/css/main.fb4c4aec.chunk.css",
+    "main.js": "/glassmorphism-css-generator/static/js/main.0aa85c18.chunk.js",
+    "main.js.map": "/glassmorphism-css-generator/static/js/main.0aa85c18.chunk.js.map",
+    "runtime-main.js": "/glassmorphism-css-generator/static/js/runtime-main.bc080a86.js",
+    "runtime-main.js.map": "/glassmorphism-css-generator/static/js/runtime-main.bc080a86.js.map",
+    "static/js/2.d15681dd.chunk.js": "/glassmorphism-css-generator/static/js/2.d15681dd.chunk.js",
+    "static/js/2.d15681dd.chunk.js.map": "/glassmorphism-css-generator/static/js/2.d15681dd.chunk.js.map",
+    "static/js/3.49b4e1aa.chunk.js": "/glassmorphism-css-generator/static/js/3.49b4e1aa.chunk.js",
+    "static/js/3.49b4e1aa.chunk.js.map": "/glassmorphism-css-generator/static/js/3.49b4e1aa.chunk.js.map",
+    "index.html": "/glassmorphism-css-generator/index.html",
+    "static/css/main.fb4c4aec.chunk.css.map": "/glassmorphism-css-generator/static/css/main.fb4c4aec.chunk.css.map",
+    "static/js/2.d15681dd.chunk.js.LICENSE.txt": "/glassmorphism-css-generator/static/js/2.d15681dd.chunk.js.LICENSE.txt",
+    "static/media/index.scss": "/glassmorphism-css-generator/static/media/people_logo3.b701fcb3.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.bc080a86.js",
+    "static/js/2.d15681dd.chunk.js",
+    "static/css/main.fb4c4aec.chunk.css",
+    "static/js/main.0aa85c18.chunk.js"
+  ]
+}

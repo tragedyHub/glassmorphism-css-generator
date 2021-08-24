@@ -4,14 +4,17 @@ import styled from "styled-components"
 const DisplayResultBlock = styled.div`
   background: url(${(props) => props.image}) no-repeat center center;
   width: 100%;
-  height: 100%;
+  height: 450px;
   border-radius: 0.3em;
   display: flex;
+  @media screen and (max-width: 640px) {
+    height: 800px;
+  }
 `;
 const DisplayResultContent = styled.div`
   margin: auto auto;
   border-radius: 0.5em;
-  height: 65%;
+  height: auto;
   width: 70%;
   border: 1px solid #fff;
   backdrop-filter: blur(${(props) => props.blur}px)
@@ -21,6 +24,9 @@ const DisplayResultContent = styled.div`
   background-color: rgba(0, 0, 0, ${(props) => props.opacity / 100});
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.125);
+  @media screen and (max-width: 640px) {
+    height: 90%;
+  }
 `;
 
 const ResultPreview = (props) => {
@@ -31,6 +37,7 @@ const ResultPreview = (props) => {
           blur={props.blurCounter}
           opacity={props.opacityCounter}
           saturation={props.saturationCounter}
+          color={props.color}
         >
           <div className="result_content_row">
             <h1 className="result_content_title">Team members</h1>

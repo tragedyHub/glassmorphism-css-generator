@@ -1,9 +1,9 @@
 @mixin blockStyles {
-  border: 1px solid #374251;
-  padding: 1.5em;
-  border-radius: 0.3em;
-  height: 100%;
-  background: #1f2a37;
+    border: 1px solid #374251;
+    padding: 1.5em;
+    border-radius: 0.3em;
+    height: 100%;
+    background: #1f2a37;
 }
 
 *,
@@ -11,223 +11,290 @@ a,
 li,
 button,
 div {
-  padding: 0;
-  margin: 0;
-  font-size: 16px;
-  color: #fff;
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    color: #fff;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .container {
-  height: 100%;
-  width: 1300px;
-  margin: 0 auto;
+    height: 100%;
+    width: 70%;
+    margin: 0 auto;
 }
-
-.App {
-  width: 100vw;
-  height: 100vh;
-  // background-image: url("https://images.unsplash.com/photo-1519681393784-d120267933ba?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1124&q=100");
-  // background-position: center;
-  // background-size: cover;
-  background: #111927;
+body {
+    background: #111927;
 }
 
 input {
-  outline: none;
+    outline: none;
 }
 
 .help_row {
-  height: 5%;
-  padding-top: 2em;
+    height: auto;
+    padding-top: 2em;
+    position: relative;
 
-  .cont {
-    background: #1f2a37;
-    height: 100%;
-    border: 1px solid #374251;
-    border-radius: 0.3em;
-    padding: 1.5em;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+    .container {
+        height: 100%;
+    }
+    .cont {
+        background: #1f2a37;
+        height: 100%;
+        border: 1px solid #374251;
+        border-radius: 0.3em;
+        padding: 1.5em;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        @media screen and (max-width: 636px) {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+
+.help_row_item {
+    @media screen and (max-width: 1005px) {
+        &:nth-child(n + 5) {
+            margin-top: 20px;
+        }
+    }
+    @media screen and (max-width: 821px) {
+        &:nth-child(n + 4) {
+            margin-top: 20px;
+            justify-content: flex-start;
+        }
+    }
+    @media screen and (max-width: 636px) {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+        &:nth-child(n+2) {
+          margin-top: 20px;
+        }
+    }
 }
 
 .help_row_item_title {
-  margin-bottom: 1em;
+    margin-bottom: 1em;
 }
 
 .help_row_item_input {
-  background: transparent;
-  border: 1px solid #374251;
-  border-radius: 0.3em;
-  padding: 0.4em 0.4em;
-  font-size: 0.8em;
-  ::placeholder {
-    color: #88909c;
-  }
+    background: transparent;
+    border: 1px solid #374251;
+    border-radius: 0.3em;
+    padding: 0.4em 0.4em;
+    font-size: 0.8em;
+    ::placeholder {
+        color: #88909c;
+    }
 }
 
 .result_section {
-  margin-top: 6.4em;
-  height: 50vh;
-  .cont {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+    margin-top: 30px;
+    height: auto;
+    .cont {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
 
-  .result_card,
-  .code_result {
-    @include blockStyles();
-    width: 45%;
-  }
+    .result_card {
+        @include blockStyles();
+        width: 45%;
+        padding: 2em;
+        @media screen and (max-width: 1655px) {
+            width: 100%;
+        }
+    }
+    .code_result {
+        width: 45%;
+        height: auto;
+        border: 1px solid #374251;
+        padding: 1.5em;
+        border-radius: 0.3em;
+        background: #1f2a37;
+        @media screen and (max-width: 1655px) {
+            width: 100%;
+            margin-top: 40px;
+        }
+    }
 }
 
 .result_content_title {
-  font-weight: 500;
-  font-size: 1.3em;
-  padding: 0.8em;
+    font-weight: 500;
+    font-size: 1.3em;
+    padding: 0.8em;
 }
 
 .result_content_row {
-  border-bottom: 1px solid #1a1a1a;
-  height: 17%;
+    border-bottom: 1px solid #1a1a1a;
+    height: 17%;
+    @media screen and (max-width: 600px) {
+      height: 60px;
+    }
 }
 
 .result_content_team {
-  padding: 0 1em;
+    padding: 0 1em;
 }
 .result_content_people_card {
-  padding: 0.5em 0;
-  height: 3em;
-  display: flex;
-  align-items: center;
+    padding: 0.5em 0;
+    height: 3em;
+    display: flex;
+    align-items: center;
+    @media screen and (max-width: 600px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: auto;
+      padding: 1em 0;
+    }
 }
 .result_content_people_card:not(:last-child) {
-  border-bottom: 1px solid #1a1a1a;
+    border-bottom: 1px solid #1a1a1a;
 }
 
 .card_logo {
-  height: 2.2em;
-  width: 2.2em;
-  background: #333;
-  border-radius: 50%;
-  margin-right: 1em;
+    height: 2.2em;
+    width: 2.2em;
+    background: #333;
+    border-radius: 50%;
+    margin-right: 1em;
+    @media screen and (max-width: 600px) {
+      margin-right: 0!important;
+      margin-bottom: 10px;
+    }
 }
 .card_column {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    @media screen and (max-width: 600px) {
+      align-items: center;
+      margin-bottom: 10px;
+    }
 }
 
 .card_title {
-  font-size: 0.9em;
+    font-size: 0.9em;
 }
 
 .status {
-  display: flex;
-  align-items: center;
-  margin-top: 0.3em;
+    display: flex;
+    align-items: center;
+    margin-top: 0.3em;
 }
 .status_text {
-  font-size: 0.8em;
-  color: #9A9DAC;
+    font-size: 0.8em;
+    color: #9a9dac;
 }
 .circle {
-  height: 0.5em;
-  width: 0.5em;
-  border-radius: 50%;
-  margin-right: 0.3em;
+    height: 0.5em;
+    width: 0.5em;
+    border-radius: 50%;
+    margin-right: 0.3em;
 }
 
 .status_online {
-  background: #13A987;
+    background: #13a987;
 }
 
 .status_offline {
-  background: #D81E5B;
+    background: #d81e5b;
 }
 .status_buzy {
-  background: #F59E0B;
+    background: #f59e0b;
 }
 
 .btn {
-  display: flex;
-  margin-left: auto;
-  padding: 1em;
-  background: #3CAA5B;
-  border: none;
-  font-size: 0.8em;
-  border-radius: 0.5em;
-  cursor: pointer;
+    display: flex;
+    margin-left: auto;
+    padding: 1em;
+    background: #3caa5b;
+    border: none;
+    font-size: 0.8em;
+    border-radius: 0.5em;
+    cursor: pointer;
+    @media screen and (max-width: 600px) {
+      margin: 0 auto;
+    }
 }
 
 .logo1 {
-  background: url(./images/people_logo1.jpg) no-repeat center center;
-  background-size: cover;
+    background: url(./images/people_logo1.jpg) no-repeat center center;
+    background-size: cover;
 }
 .logo2 {
-  background: url(./images/people_logo2.jpg) no-repeat center center;
-  background-size: cover;
+    background: url(./images/people_logo2.jpg) no-repeat center center;
+    background-size: cover;
 }
 .logo3 {
-  background: url(./images/people_logo3.jpg) no-repeat center center;
-  background-size: cover;
+    background: url(./images/people_logo3.jpg) no-repeat center center;
+    background-size: cover;
 }
 .logo4 {
-  background: url(./images/people_logo4.jpg) no-repeat center center;
-  background-size: cover;
+    background: url(./images/people_logo4.jpg) no-repeat center center;
+    background-size: cover;
 }
-
 
 .code_result {
-  .code_result_title {
-    margin-bottom: 1em;
-  }
+    .code_result_title {
+        margin-bottom: 1em;
+    }
 }
 .code_result_content {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 .code_row {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .selector {
-  color: #F7A54F;
-  margin-right: 0.3em;
+    color: #f7a54f;
+    margin-right: 0.3em;
 }
 
 .property_code_row {
-  padding-left: 1.5em;
-  margin: 0.3em 0;
+    padding-left: 1.5em;
+    margin: 0.3em 0;
 }
 
 .property_cont {
-  padding-left: 0.3em;
-  color: #099CEB;
+    padding-left: 0.3em;
+    color: #099ceb;
 }
 
 .property_value {
-  color: #E75159;
+    color: #e75159;
+    word-wrap: break-word
 }
 
 .bracket {
-  color: #8A919D;
+    color: #8a919d;
 }
 
 .mt {
-  margin-top: 3em;
+    margin-top: 3em;
 }
 .green {
-  color: #3FB362;
+    color: #3fb362;
 }
 .white {
-  color: #fff;
+    color: #fff;
 }
 
+.rcp {
+    position: absolute;
+    top: 8em;
+    left: 40em;
+    z-index: 11111;
+}

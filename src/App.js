@@ -1,8 +1,10 @@
 import React, { useState } from "react";
-import styled from "styled-components";
-import CodeResult from "./components/HelpRow/CodeResult/CodeResult";
+import CodeResult from "./components/CodeResult/CodeResult";
 import HelpRow from "./components/HelpRow/HelpRow";
 import ResultPreview from "./components/ResultPreview/ResultPreview";
+
+import { ColorPicker, useColor } from "react-color-palette";
+import "react-color-palette/lib/css/styles.css";
 
 const App = () => {
   const imageUrlPlaceholder =
@@ -12,7 +14,8 @@ const App = () => {
   const [opacityCounter, setOpacityCounter] = useState(100);
   const [saturationCounter, setSaturationCounter] = useState(200);
   const [imageUrl, setImageUrl] = useState(imageUrlPlaceholder);
-
+  const [color, setColor] = useColor("RGB", 255,255,255);
+  
   return (
     <div className="App">
       <HelpRow
@@ -23,14 +26,24 @@ const App = () => {
         setBlurCounter={setBlurCounter}
         setOpacityCounter={setOpacityCounter}
         setSaturationCounter={setSaturationCounter}
-        imageUrl={imageUrl}
+        // imageUrl={imageUrl}
         setImageUrl={setImageUrl}
         imageUrlPlaceholder={imageUrlPlaceholder}
+        r={color.rgb.r}
+        g={color.rgb.g}
+        b={color.rgb.b}
+        setColor={setColor}
       />
       <section className="result_section">
         <div className="container">
           <div className="cont">
-            <ResultPreview imageUrl={imageUrl} blurCounter={blurCounter} opacityCounter={opacityCounter} saturationCounter={saturationCounter}/>
+            <ResultPreview
+              imageUrl={imageUrl}
+              blurCounter={blurCounter}
+              opacityCounter={opacityCounter}
+              saturationCounter={saturationCounter}
+              color={color.rgb}
+            />
             <CodeResult
               imageUrl={imageUrl}
               blurCounter={blurCounter}

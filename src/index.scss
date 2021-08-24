@@ -26,7 +26,10 @@ div {
     margin: 0 auto;
 }
 body {
-    background: #111927;
+    // background: #111927;
+    background: linear-gradient(270deg, #101010, #111927);
+    background-size: 400% 400%;
+    animation: bgAnimation 30s ease infinite;
 }
 
 input {
@@ -297,4 +300,20 @@ input {
     top: 8em;
     left: 40em;
     z-index: 11111;
+}
+
+@-webkit-keyframes bgAnimation {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@-moz-keyframes bgAnimation {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@keyframes bgAnimation {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
 }
